@@ -18,6 +18,20 @@
 
 </head>
 <body>
-    
+    <div id="app">
+    <div class="container">
+            <h1 class="my-4 text-center">Lista Dischi</h1>
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <ul class="list-group">
+                        <li v-for="(disco,index) in dischi" :key="index" class="list-group-item">{{ disco.title }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- v-for="(disco,index) in dischi" :key="index" class="list-group-item">{{ disco.title }} -->
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
