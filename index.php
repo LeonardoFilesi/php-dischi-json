@@ -22,13 +22,16 @@
     <div class="container">
             <h1 class="my-4 text-center">Lista Dischi</h1>
             <div class="row justify-content-center">
-                <div class="col-7">
-                    <ul class="list-group">
-                        <li v-for="(disco,index) in dischi" :key="index" class="list-group-item">{{ disco.title }}</li>
-                    </ul>
+                <div class="card" v-for="(disco,index) in dischi" :key="index" class="list-group-item" style="width: 220px">
+                    <img :src="disco.poster" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{disco.title}}</h5>
+                        <p class="card-text">{{disco.author}}</p>
+                        <p class="card-text">{{disco.genre}}</p>
+                        <p class="card-text">{{disco.year}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         <!-- v-for="(disco,index) in dischi" :key="index" class="list-group-item">{{ disco.title }} -->
     </div>
 
